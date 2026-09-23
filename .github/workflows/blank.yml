@@ -24,6 +24,9 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
+        with:
+          ref: tarefas
+          path: hello
         
       # Runs a single command using the runners shell
       - name: Run a one-line script
@@ -33,5 +36,6 @@ jobs:
       - name: Run a multi-line script
         run: |
           ls -all
-          docker build -t debiancesae:v2 .
-          docker images
+          ls hello
+          # docker build -t debiancesae:v2 .
+          # docker images
