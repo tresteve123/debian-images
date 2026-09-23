@@ -37,5 +37,7 @@ jobs:
         run: |
           ls -all
           ls hello
-          # docker build -t debiancesae:v2 .
-          # docker images
+          cd hello
+          docker build -t sergio24082026cr.azurecr.io/imagem1:v1
+          docker login -u ${{ secrets.UTILIZADOR }} -p ${{ secrets.SEGREDO }} sergio24082026cr.azurecr.io
+          docker push sergio24082026cr.azurecr.io/imagem1:v1
