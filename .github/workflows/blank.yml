@@ -39,5 +39,5 @@ jobs:
           ls hello
           cd hello
           docker build -t sergio24082026cr.azurecr.io/imagem1:v1
-          docker login -u ${{ secrets.UTILIZADOR }} -p ${{ secrets.SEGREDO }} sergio24082026cr.azurecr.io
-          docker push sergio24082026cr.azurecr.io/imagem1:v1
+          docker login -u ${{ secrets.UTILIZADOR1 }} -p ${{ secrets.SEGREDO1 }} aula2309acr.azurecr.io
+          docker push aula2309acr.azurecr.io/imagem1:v1
